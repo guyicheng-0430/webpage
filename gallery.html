@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<title>作品画廊 · HELPing 平和学校帮助社</title>
+<meta name="description" content="浏览山区儿童的原创绘画、书法与创意写作作品。商家如需使用作品进行生产，需向创作者支付酬劳。">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="preload" href="assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body class="grain">
+
+<header class="header" data-header>
+  <div class="shell header__inner">
+    <a class="brand" href="index.html" aria-label="HELPing 首页">
+      <span class="brand__mark"><img src="assets/img/badge.png" alt="" width="34" height="34" decoding="async"></span>
+      <span class="brand__text">
+        <span class="brand__name">HELPing</span>
+        <span class="brand__sub">Pinghe Helping Club</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav__link" href="index.html">首页</a>
+      <a class="nav__link" href="projects.html">三个项目</a>
+      <a class="nav__link" href="gallery.html" aria-current="page">作品画廊</a>
+      <a class="nav__link" href="upload.html">上传作品</a>
+      <a class="nav__link" href="shop.html">公益商店</a>
+      <a class="nav__link" href="messages.html">留言墙</a>
+    </nav>
+    <div class="header__actions">
+      <button class="cart-btn" type="button" data-cart-open aria-label="打开购物车">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M2.5 3h1.7l1.9 9.5a1 1 0 0 0 1 .8h7.5a1 1 0 0 0 1-.8L16.9 6H5.3"/>
+          <circle cx="7.6" cy="16.6" r="1.15"/><circle cx="14.6" cy="16.6" r="1.15"/>
+        </svg>
+        <span class="cart-count" data-cart-count hidden>0</span>
+      </button>
+      <a class="btn btn--sm header__cta" href="upload.html">上传作品</a>
+      <button class="burger" type="button" data-burger aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" data-drawer>
+  <a class="drawer__link" href="index.html">首页 <span>HOME</span></a>
+  <a class="drawer__link" href="projects.html">三个项目 <span>PROJECTS</span></a>
+  <a class="drawer__link" href="gallery.html">作品画廊 <span>GALLERY</span></a>
+  <a class="drawer__link" href="upload.html">上传作品 <span>UPLOAD</span></a>
+  <a class="drawer__link" href="shop.html">公益商店 <span>SHOP</span></a>
+  <a class="drawer__link" href="messages.html">留言墙 <span>MESSAGES</span></a>
+  <div class="drawer__foot">
+    <a class="btn btn--block" href="upload.html">上传一份原创作品</a>
+  </div>
+</div>
+
+<main>
+
+  <section class="page-head">
+    <span class="scanline" aria-hidden="true"></span>
+    <div class="shell">
+      <div class="page-head__row">
+        <div>
+          <nav class="breadcrumbs"><a href="index.html">首页</a><span>/</span><span>作品画廊</span></nav>
+          <h1 class="h1 page-head__title">作品画廊</h1>
+        </div>
+        <p class="page-head__aside">
+          这里收录了合作学校学生们投稿的原创作品。
+          点开任意一幅可以看到创作者写在背后的话。如需将作品用于生产，请先申请授权。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--paper section section--tight">
+    <div class="shell">
+
+      <!-- 工具条 -->
+      <div class="section-head__top" style="margin-bottom:28px">
+        <div class="filters" data-filters>
+          <button class="chip is-active" type="button" data-filter="all">全部作品</button>
+          <button class="chip" type="button" data-filter="绘画">绘画</button>
+          <button class="chip" type="button" data-filter="书法">书法</button>
+          <button class="chip" type="button" data-filter="创意写作">创意写作</button>
+          <button class="chip" type="button" data-filter="手作">手作</button>
+          <button class="chip" type="button" data-filter="开放授权">可申请授权</button>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px">
+          <input class="input" type="search" placeholder="搜索作品或创作者" data-search style="width:210px;padding:9px 14px;font-size:.84rem">
+          <span class="num-badge" data-count></span>
+        </div>
+      </div>
+
+      <div class="gallery-grid" data-gallery></div>
+
+      <div class="empty-state" data-gallery-empty hidden style="padding:64px 0">
+        没有匹配的作品。换个关键词试试。
+      </div>
+
+      <div class="notice" style="margin-top:44px">
+        <b>关于授权：</b>画廊中的所有作品著作权均归创作者本人所有。
+        商家、品牌或机构如需将作品用于产品生产、广告或二次分发，
+        须通过 HELPing 与创作者取得授权并支付酬劳，未经许可不得商用。
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="shell">
+      <div class="cta-band" data-reveal>
+        <div>
+          <h2 class="cta-band__title">你手里也有一幅画。</h2>
+          <p class="cta-band__desc">
+            不管它在作业本背面，还是夹在课本里——拍下来传上来，
+            它就有机会变成一件真的产品，去到别人手上。
+          </p>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--light" href="upload.html">上传作品</a>
+          <a class="btn btn--ghost-light" href="shop.html">看看成品</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <span class="brand__mark"><img src="assets/img/badge.png" alt="" width="34" height="34" decoding="async"></span>
+          <span class="brand__text">
+            <span class="brand__name">HELPing</span>
+            <span class="brand__sub">Pinghe Helping Club</span>
+          </span>
+        </a>
+        <p class="footer__desc">
+          平和学校公益帮助社。让弱势群体的能力被看见、被使用、能为自己的生活创造价值。
+        </p>
+      </div>
+      <div>
+        <div class="footer__col-title">项目</div>
+        <div class="footer__links">
+          <a href="projects.html#business">文创共创</a>
+          <a href="projects.html#outreach">线上宣传</a>
+          <a href="projects.html#health">健康守护</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">参与</div>
+        <div class="footer__links">
+          <a href="upload.html">上传作品</a>
+          <a href="gallery.html">作品画廊</a>
+          <a href="shop.html">公益商店</a>
+          <a href="messages.html">留言墙</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">联系</div>
+        <div class="footer__links">
+          <a href="projects.html#contact">合作与捐赠</a>
+          <a href="messages.html">意见反馈</a>
+          <a href="index.html">返回首页</a>
+          <a href="admin.html">管理后台</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> HELPing · 平和学校帮助社</span>
+      <span>演示站点：作品、购物车与留言保存在本地浏览器</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 作品详情 -->
+<div class="lightbox" data-lightbox aria-hidden="true" role="dialog" aria-modal="true" aria-label="作品详情">
+  <button class="lightbox__close" type="button" data-lb-close aria-label="关闭">&times;</button>
+  <div class="lightbox__inner">
+    <div class="lightbox__media"><img src="" alt="" data-lb-img></div>
+    <div class="lightbox__body" data-lb-body></div>
+  </div>
+</div>
+
+<div class="scrim" data-scrim></div>
+<aside class="cart-panel" data-cart-panel aria-hidden="true" aria-label="购物车">
+  <div class="cart-panel__head">
+    <div>
+      <div class="h4">购物车</div>
+      <div class="tiny muted" data-cart-hint></div>
+    </div>
+    <button class="cart-btn" type="button" data-cart-close aria-label="关闭购物车">&times;</button>
+  </div>
+  <div class="cart-panel__body" data-cart-body></div>
+  <div class="cart-panel__foot" data-cart-foot hidden></div>
+</aside>
+
+<script src="assets/js/store.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/gallery.js"></script>
+</body>
+</html>

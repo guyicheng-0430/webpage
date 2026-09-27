@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<title>管理后台 · HELPing 平和学校帮助社</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="preload" href="assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body class="grain">
+
+<header class="header" data-header>
+  <div class="shell header__inner">
+    <a class="brand" href="index.html" aria-label="HELPing 首页">
+      <span class="brand__mark"><img src="assets/img/badge.png" alt="" width="34" height="34" decoding="async"></span>
+      <span class="brand__text">
+        <span class="brand__name">HELPing</span>
+        <span class="brand__sub">Admin Console</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav__link" href="index.html">首页</a>
+      <a class="nav__link" href="gallery.html">作品画廊</a>
+      <a class="nav__link" href="shop.html">公益商店</a>
+      <a class="nav__link" href="messages.html">留言墙</a>
+    </nav>
+    <div class="header__actions">
+      <button class="btn btn--ghost btn--sm" type="button" data-logout>退出登录</button>
+      <button class="burger" type="button" data-burger aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" data-drawer>
+  <a class="drawer__link" href="index.html">首页 <span>HOME</span></a>
+  <a class="drawer__link" href="gallery.html">作品画廊 <span>GALLERY</span></a>
+  <a class="drawer__link" href="shop.html">公益商店 <span>SHOP</span></a>
+  <a class="drawer__link" href="messages.html">留言墙 <span>MESSAGES</span></a>
+  <div class="drawer__foot">
+    <button class="btn btn--block" type="button" data-logout>退出登录</button>
+  </div>
+</div>
+
+<main>
+
+  <section class="page-head">
+    <span class="scanline" aria-hidden="true"></span>
+    <div class="shell">
+      <div class="page-head__row">
+        <div>
+          <nav class="breadcrumbs"><a href="index.html">首页</a><span>/</span><span>管理后台</span></nav>
+          <h1 class="h1 page-head__title">管理后台</h1>
+        </div>
+        <p class="page-head__aside">
+          发货与审核的日常操作台。口令只作门禁之用，请避免在公共电脑上登录，
+          离开前记得退出。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ 口令门禁 ============================ -->
+  <section class="section section--paper" data-admin-gate hidden>
+    <div class="shell">
+      <form class="adm-gate" data-gate-form>
+        <span class="brand__mark adm-gate__mark">
+          <img src="assets/img/badge.png" alt="" width="34" height="34" decoding="async">
+        </span>
+        <span class="eyebrow eyebrow--plain" style="margin-top:20px">Restricted area</span>
+        <h2 class="h2" style="margin:12px 0 8px">请输入管理口令</h2>
+        <p class="small muted" style="margin-bottom:24px">
+          仅社团负责发货与审核的同学需要进入。
+        </p>
+
+        <div class="field">
+          <label class="field__label" for="gate-pw">管理口令</label>
+          <input class="input" id="gate-pw" name="password" type="password" data-gate-pw
+                 autocomplete="current-password" placeholder="请输入口令" required>
+        </div>
+
+        <p class="tiny" data-gate-msg role="status" style="min-height:18px;margin-top:12px"></p>
+        <p class="adm-gate__lock" data-gate-lock hidden role="alert"></p>
+
+        <button class="btn btn--block" type="submit" style="margin-top:16px">进入后台</button>
+
+        <p class="tiny muted" style="margin-top:20px;line-height:1.75">
+          这是纯静态站点，口令校验在浏览器内完成，只能挡住随手点进来的人，
+          并不能当作真正的安全防护。正式上线需改为服务端鉴权。
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================ 后台主体 ============================ -->
+  <section class="section section--paper" data-admin-app hidden>
+    <div class="shell">
+
+      <div class="adm-tabs" role="tablist">
+        <button class="adm-tab is-active" type="button" data-tab="overview" role="tab">概览</button>
+        <button class="adm-tab" type="button" data-tab="orders" role="tab">发货管理</button>
+        <button class="adm-tab" type="button" data-tab="review" role="tab">内容审核</button>
+      </div>
+
+      <!-- 概览 -->
+      <div data-panel="overview"></div>
+
+      <!-- 发货管理 -->
+      <div data-panel="orders" hidden>
+        <div class="adm-toolbar">
+          <div class="filters" data-order-status></div>
+        </div>
+        <div class="adm-toolbar adm-toolbar--sub">
+          <input class="input adm-search" type="search" data-orders-search
+                 placeholder="搜索订单号 / 收货人 / 电话 / 地址 / 运单号" autocomplete="off">
+          <span class="tiny muted"><b data-orders-count>0</b> 条</span>
+        </div>
+        <div class="adm-orders" data-orders></div>
+      </div>
+
+      <!-- 内容审核 -->
+      <div data-panel="review" hidden>
+        <div class="adm-toolbar">
+          <div class="filters" data-review-kind></div>
+        </div>
+        <div class="adm-toolbar adm-toolbar--sub">
+          <div class="filters" data-review-state></div>
+          <span class="tiny muted"><b data-review-count>0</b> 条</span>
+        </div>
+        <div class="adm-reviews" data-review-list></div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <span class="brand__mark"><img src="assets/img/badge.png" alt="" width="34" height="34" decoding="async"></span>
+          <span class="brand__text">
+            <span class="brand__name">HELPing</span>
+            <span class="brand__sub">Pinghe Helping Club</span>
+          </span>
+        </a>
+        <p class="footer__desc">
+          平和学校公益帮助社。让弱势群体的能力被看见、被使用、能为自己的生活创造价值。
+        </p>
+      </div>
+      <div>
+        <div class="footer__col-title">项目</div>
+        <div class="footer__links">
+          <a href="projects.html#business">文创共创</a>
+          <a href="projects.html#outreach">线上宣传</a>
+          <a href="projects.html#health">健康守护</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">参与</div>
+        <div class="footer__links">
+          <a href="upload.html">上传作品</a>
+          <a href="gallery.html">作品画廊</a>
+          <a href="shop.html">公益商店</a>
+          <a href="messages.html">留言墙</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">管理</div>
+        <div class="footer__links">
+          <a href="admin.html" aria-current="page">管理后台</a>
+          <a href="projects.html#contact">合作与捐赠</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> HELPing · 平和学校帮助社</span>
+      <span>演示站点：订单、作品与留言保存在本地浏览器</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/store.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>

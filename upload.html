@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<title>上传原创作品 · HELPing 平和学校帮助社</title>
+<meta name="description" content="把山区儿童的原创画作、书法与创意写作上传到 HELPing，作品版权归创作者所有，商家使用需支付酬劳。">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="preload" href="assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body class="grain">
+
+<header class="header" data-header>
+  <div class="shell header__inner">
+    <a class="brand" href="index.html" aria-label="HELPing 首页">
+      <span class="brand__mark"><img src="assets/img/badge.png" alt="" width="34" height="34" decoding="async"></span>
+      <span class="brand__text">
+        <span class="brand__name">HELPing</span>
+        <span class="brand__sub">Pinghe Helping Club</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav__link" href="index.html">首页</a>
+      <a class="nav__link" href="projects.html">三个项目</a>
+      <a class="nav__link" href="gallery.html">作品画廊</a>
+      <a class="nav__link" href="upload.html" aria-current="page">上传作品</a>
+      <a class="nav__link" href="shop.html">公益商店</a>
+      <a class="nav__link" href="messages.html">留言墙</a>
+    </nav>
+    <div class="header__actions">
+      <button class="cart-btn" type="button" data-cart-open aria-label="打开购物车">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M2.5 3h1.7l1.9 9.5a1 1 0 0 0 1 .8h7.5a1 1 0 0 0 1-.8L16.9 6H5.3"/>
+          <circle cx="7.6" cy="16.6" r="1.15"/><circle cx="14.6" cy="16.6" r="1.15"/>
+        </svg>
+        <span class="cart-count" data-cart-count hidden>0</span>
+      </button>
+      <a class="btn btn--sm header__cta" href="gallery.html">作品画廊</a>
+      <button class="burger" type="button" data-burger aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" data-drawer>
+  <a class="drawer__link" href="index.html">首页 <span>HOME</span></a>
+  <a class="drawer__link" href="projects.html">三个项目 <span>PROJECTS</span></a>
+  <a class="drawer__link" href="gallery.html">作品画廊 <span>GALLERY</span></a>
+  <a class="drawer__link" href="upload.html">上传作品 <span>UPLOAD</span></a>
+  <a class="drawer__link" href="shop.html">公益商店 <span>SHOP</span></a>
+  <a class="drawer__link" href="messages.html">留言墙 <span>MESSAGES</span></a>
+  <div class="drawer__foot">
+    <a class="btn btn--block" href="gallery.html">看看已上传的作品</a>
+  </div>
+</div>
+
+<main>
+
+  <section class="page-head">
+    <span class="scanline" aria-hidden="true"></span>
+    <div class="shell">
+      <div class="page-head__row">
+        <div>
+          <nav class="breadcrumbs"><a href="index.html">首页</a><span>/</span><span>上传作品</span></nav>
+          <h1 class="h1 page-head__title">上传一份原创作品</h1>
+        </div>
+        <p class="page-head__aside">
+          作品可以是绘画、书法、创意写作手稿或手作照片。
+          上传后进入社团审核与二次创作流程，版权始终归创作者本人所有。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--paper section section--tight">
+    <div class="shell">
+      <div class="split" style="align-items:start;grid-template-columns:minmax(0,1.35fr) minmax(0,0.65fr)">
+
+        <!-- ------------------------------ 表单 ------------------------------ -->
+        <form class="panel" id="uploadForm" novalidate data-reveal>
+          <div class="form-grid">
+
+            <!-- 图片 -->
+            <div class="field">
+              <label class="field__label">作品图片 <span class="field__req">*</span></label>
+              <div class="dropzone" data-dropzone tabindex="0" role="button" aria-label="选择或拖拽作品图片">
+                <div class="dropzone__icon">
+                  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M10 13.5V3.6"/><path d="M6.4 7.1 10 3.5l3.6 3.6"/>
+                    <path d="M3.2 13v2.4a1.4 1.4 0 0 0 1.4 1.4h10.8a1.4 1.4 0 0 0 1.4-1.4V13"/>
+                  </svg>
+                </div>
+                <div class="dropzone__title">点击选择图片，或拖拽到这里</div>
+                <div class="dropzone__hint">支持 JPG / PNG，最多 6 张；建议在光线充足处平铺拍摄，避免反光与阴影</div>
+                <input type="file" accept="image/*" multiple data-file-input>
+              </div>
+              <div class="preview-grid" data-preview></div>
+              <p class="field__hint" data-file-hint>尚未选择图片</p>
+            </div>
+
+            <hr>
+
+            <div class="form-grid form-grid--2">
+              <div class="field">
+                <label class="field__label" for="f-title">作品名称 <span class="field__req">*</span></label>
+                <input class="input" id="f-title" name="title" type="text" maxlength="40" placeholder="例如：山那边的家" required>
+              </div>
+              <div class="field">
+                <label class="field__label" for="f-category">作品类型 <span class="field__req">*</span></label>
+                <select class="select" id="f-category" name="category" required>
+                  <option value="">请选择</option>
+                  <option>绘画</option>
+                  <option>书法</option>
+                  <option>创意写作</option>
+                  <option>手作</option>
+                  <option>其他</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid form-grid--2">
+              <div class="field">
+                <label class="field__label" for="f-author">创作者昵称 <span class="field__req">*</span></label>
+                <input class="input" id="f-author" name="author" type="text" maxlength="20" placeholder="可用小名或笔名" required>
+                <p class="field__hint">本站不会公开创作者的真实姓名与联系方式。</p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="f-age">创作者年龄</label>
+                <input class="input" id="f-age" name="age" type="number" min="3" max="18" placeholder="选填，例如 9">
+              </div>
+            </div>
+
+            <div class="form-grid form-grid--2">
+              <div class="field">
+                <label class="field__label" for="f-school">学校 / 地区</label>
+                <input class="input" id="f-school" name="school" type="text" maxlength="40" placeholder="例如：安徽 · 合作学校">
+              </div>
+              <div class="field">
+                <label class="field__label" for="f-medium">使用材质</label>
+                <input class="input" id="f-medium" name="medium" type="text" maxlength="30" placeholder="例如：蜡笔 / 水彩 / 毛笔">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="f-tags">关键词标签</label>
+              <input class="input" id="f-tags" name="tags" type="text" maxlength="60" placeholder="用英文逗号分隔，例如：山川, 家, 星空">
+              <p class="field__hint">标签会帮助商家在画廊中检索到这件作品。</p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="f-story">作品背后的故事</label>
+              <textarea class="textarea" id="f-story" name="story" maxlength="300" placeholder="创作者说过的、关于这幅画的一句话，或创作时的情境。这部分往往比画面本身更打动人。"></textarea>
+            </div>
+
+            <hr>
+
+            <div class="form-grid">
+              <label class="checkbox">
+                <input type="checkbox" name="own" required>
+                <span>我确认该作品为创作者本人原创，且我是创作者本人，或已获得创作者及其监护人同意代为上传。</span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="license">
+                <span>我同意将作品开放给 HELPing 用于公益文创的二次创作与售卖，并接受「商家使用作品需向创作者支付酬劳」的约定。</span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="display" checked>
+                <span>我同意作品在 HELPing 作品画廊中公开展示。</span>
+              </label>
+            </div>
+
+            <div class="btn-row">
+              <button class="btn btn--lg" type="submit">提交作品</button>
+              <button class="btn btn--ghost" type="reset" data-reset>清空表单</button>
+            </div>
+
+            <p class="field__hint" data-form-msg role="status"></p>
+          </div>
+        </form>
+
+        <!-- ------------------------------ 侧栏 ------------------------------ -->
+        <aside class="stack" data-reveal data-reveal-delay="120">
+          <div class="panel panel--sticky">
+            <span class="eyebrow eyebrow--plain">上传须知</span>
+            <ul class="stack small" style="margin-top:14px;color:var(--ink-2)">
+              <li>· 仅接受创作者本人的原创作品，不接受临摹、拼贴或代笔。</li>
+              <li>· 图片尽量拍正、拍全，保留纸张边缘与真实的笔触质感。</li>
+              <li>· 创意写作类请上传手稿照片，正文可在「作品故事」中简述。</li>
+              <li>· 涉及创作者肖像、姓名、住址的信息请勿写入表单。</li>
+              <li>· 提交后由社团成员人工审核，通常 3 个工作日内反馈。</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <span class="eyebrow eyebrow--plain">版权与酬劳</span>
+            <p class="small" style="margin-top:12px;color:var(--ink-2)">
+              作品的著作权始终属于创作者本人。HELPing 仅在获得授权后，
+              将作品用于公益文创的设计、打样、生产与售卖。
+            </p>
+            <p class="small muted" style="margin-top:10px">
+              任何商家如需使用作品进行生产，须向创作者支付酬劳；
+              通过本站售出的产品，也会按约定比例把收益支付给创作者。
+            </p>
+          </div>
+
+          <div class="notice">
+            当前为演示版本：你上传的作品只会保存在<b>本机浏览器</b>中，
+            不会上传到服务器，刷新后仍会保留，但换设备或清理浏览器数据后会消失。
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------ 我的上传 ------------------------------ -->
+  <section class="section section--alt" id="mine">
+    <div class="shell">
+      <div class="section-head" data-reveal>
+        <div class="section-head__top">
+          <span class="eyebrow">My uploads</span>
+          <a class="link-arrow small" href="gallery.html">去画廊看全部 →</a>
+        </div>
+        <div class="section-head__body">
+          <h2 class="h2">我上传的作品</h2>
+        </div>
+      </div>
+      <div class="gallery-grid" data-my-uploads></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <span class="brand__mark"><img src="assets/img/badge.png" alt="" width="34" height="34" decoding="async"></span>
+          <span class="brand__text">
+            <span class="brand__name">HELPing</span>
+            <span class="brand__sub">Pinghe Helping Club</span>
+          </span>
+        </a>
+        <p class="footer__desc">
+          平和学校公益帮助社。让弱势群体的能力被看见、被使用、能为自己的生活创造价值。
+        </p>
+      </div>
+      <div>
+        <div class="footer__col-title">项目</div>
+        <div class="footer__links">
+          <a href="projects.html#business">文创共创</a>
+          <a href="projects.html#outreach">线上宣传</a>
+          <a href="projects.html#health">健康守护</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">参与</div>
+        <div class="footer__links">
+          <a href="upload.html">上传作品</a>
+          <a href="gallery.html">作品画廊</a>
+          <a href="shop.html">公益商店</a>
+          <a href="messages.html">留言墙</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">联系</div>
+        <div class="footer__links">
+          <a href="projects.html#contact">合作与捐赠</a>
+          <a href="messages.html">意见反馈</a>
+          <a href="index.html">返回首页</a>
+          <a href="admin.html">管理后台</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> HELPing · 平和学校帮助社</span>
+      <span>演示站点：作品、购物车与留言保存在本地浏览器</span>
+    </div>
+  </div>
+</footer>
+
+<div class="scrim" data-scrim></div>
+<aside class="cart-panel" data-cart-panel aria-hidden="true" aria-label="购物车">
+  <div class="cart-panel__head">
+    <div>
+      <div class="h4">购物车</div>
+      <div class="tiny muted" data-cart-hint></div>
+    </div>
+    <button class="cart-btn" type="button" data-cart-close aria-label="关闭购物车">&times;</button>
+  </div>
+  <div class="cart-panel__body" data-cart-body></div>
+  <div class="cart-panel__foot" data-cart-foot hidden></div>
+</aside>
+
+<script src="assets/js/store.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/upload.js"></script>
+</body>
+</html>

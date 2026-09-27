@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<title>公益商店 · HELPing 平和学校帮助社</title>
+<meta name="description" content="平和学校帮助社的公益文创商店。文创周边正在打样与排期，暂未开放购买，可先浏览孩子们的作品。">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="preload" href="assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body class="grain">
+
+<header class="header" data-header>
+  <div class="shell header__inner">
+    <a class="brand" href="index.html" aria-label="HELPing 首页">
+      <span class="brand__mark"><img src="assets/img/badge.png" alt="" width="34" height="34" decoding="async"></span>
+      <span class="brand__text">
+        <span class="brand__name">HELPing</span>
+        <span class="brand__sub">Pinghe Helping Club</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav__link" href="index.html">首页</a>
+      <a class="nav__link" href="projects.html">三个项目</a>
+      <a class="nav__link" href="gallery.html">作品画廊</a>
+      <a class="nav__link" href="upload.html">上传作品</a>
+      <a class="nav__link" href="shop.html" aria-current="page">公益商店</a>
+      <a class="nav__link" href="messages.html">留言墙</a>
+    </nav>
+    <div class="header__actions">
+      <button class="cart-btn" type="button" data-cart-open aria-label="打开购物车">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M2.5 3h1.7l1.9 9.5a1 1 0 0 0 1 .8h7.5a1 1 0 0 0 1-.8L16.9 6H5.3"/>
+          <circle cx="7.6" cy="16.6" r="1.15"/><circle cx="14.6" cy="16.6" r="1.15"/>
+        </svg>
+        <span class="cart-count" data-cart-count hidden>0</span>
+      </button>
+      <a class="btn btn--sm header__cta" href="gallery.html">作品画廊</a>
+      <button class="burger" type="button" data-burger aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" data-drawer>
+  <a class="drawer__link" href="index.html">首页 <span>HOME</span></a>
+  <a class="drawer__link" href="projects.html">三个项目 <span>PROJECTS</span></a>
+  <a class="drawer__link" href="gallery.html">作品画廊 <span>GALLERY</span></a>
+  <a class="drawer__link" href="upload.html">上传作品 <span>UPLOAD</span></a>
+  <a class="drawer__link" href="shop.html">公益商店 <span>SHOP</span></a>
+  <a class="drawer__link" href="messages.html">留言墙 <span>MESSAGES</span></a>
+  <div class="drawer__foot">
+    <button class="btn btn--block" type="button" data-cart-open>查看购物车</button>
+  </div>
+</div>
+
+<main>
+
+  <section class="page-head">
+    <span class="scanline" aria-hidden="true"></span>
+    <div class="shell">
+      <div class="page-head__row">
+        <div>
+          <nav class="breadcrumbs"><a href="index.html">首页</a><span>/</span><span>公益商店</span></nav>
+          <h1 class="h1 page-head__title">公益商店</h1>
+        </div>
+        <p class="page-head__aside">
+          文创周边正在打样与排期，暂未开放购买。
+          上线时，这里的每一件产品都会从一个孩子的画开始。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 收益分配 -->
+  <section class="section--paper section section--tight">
+    <div class="shell">
+      <div class="stats" data-reveal>
+        <div class="stat">
+          <div class="stat__num">01</div>
+          <div class="stat__label">创作者酬劳</div>
+          <div class="stat__note">按约定比例支付给作品创作者本人</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">02</div>
+          <div class="stat__label">材料与制作</div>
+          <div class="stat__note">打样、面料、印刷与包装成本</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">03</div>
+          <div class="stat__label">项目运营</div>
+          <div class="stat__note">用于物流、售后与后续公益项目</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">04</div>
+          <div class="stat__label">支持更多创作者</div>
+          <div class="stat__note">结余用于扩大帮扶范围</div>
+        </div>
+      </div>
+      <p class="tiny muted" style="margin-top:16px">
+        以上为收益分配的项目结构；具体比例以社团公示的方案为准。
+      </p>
+    </div>
+  </section>
+
+  <!-- 商品 -->
+  <section class="section--paper section section--tight" id="products">
+    <div class="shell">
+      <div class="section-head__top" style="margin-bottom:28px">
+        <span class="eyebrow">All products</span>
+        <div style="display:flex;align-items:center;gap:14px">
+          <span class="num-badge" data-count></span>
+          <select class="select" data-sort style="width:auto;padding:9px 40px 9px 14px;font-size:.84rem">
+            <option value="default">默认排序</option>
+            <option value="price-asc">价格从低到高</option>
+            <option value="price-desc">价格从高到低</option>
+            <option value="stock">库存充足优先</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="shop-grid" data-shop></div>
+    </div>
+  </section>
+
+  <!-- 联名与渠道 -->
+  <section class="section section--alt">
+    <div class="shell">
+      <div class="section-head" data-reveal>
+        <div class="section-head__top">
+          <span class="eyebrow">Offline &amp; collaboration</span>
+          <span class="num-badge">线下与联名</span>
+        </div>
+        <div class="section-head__body">
+          <h2 class="h1">不止在网页上卖。</h2>
+        </div>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="card" data-reveal>
+          <div class="card__body stack">
+            <span class="eyebrow eyebrow--plain">校园与图书馆</span>
+            <h3 class="h3">线下展陈与义卖</h3>
+            <p class="small muted">在图书馆设展陈区，配合校园活动做义卖。作品旁边会放上创作者的故事卡。</p>
+          </div>
+        </div>
+        <div class="card" data-reveal data-reveal-delay="90">
+          <div class="card__body stack">
+            <span class="eyebrow eyebrow--plain">线上平台</span>
+            <h3 class="h3">抖音 · 小红书 · 微信</h3>
+            <p class="small muted">社团成员运营各平台账号，负责品牌宣传、产品推广、订单销售与售后维护。</p>
+          </div>
+        </div>
+        <div class="card" data-reveal data-reveal-delay="180">
+          <div class="card__body stack">
+            <span class="eyebrow eyebrow--plain">联名合作</span>
+            <h3 class="h3">与品牌一起做</h3>
+            <p class="small muted">正在洽谈与本地书店、文创品牌的联名。欢迎有生产或渠道资源的伙伴联系我们。</p>
+            <a class="link-arrow small" href="projects.html#contact">聊合作 →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常见问题 -->
+  <section class="section section--tight">
+    <div class="shell">
+      <div class="split" style="align-items:start">
+        <div data-reveal>
+          <span class="eyebrow">FAQ</span>
+          <h2 class="h1" style="margin-top:16px">买之前，<br>你可能想问。</h2>
+        </div>
+        <div class="stack" data-reveal data-reveal-delay="120">
+          <div class="panel">
+            <div class="h4">Q1 · 我可以指定想支持哪位创作者吗？</div>
+            <p class="small muted" style="margin-top:8px">可以。下单时备注创作者昵称，或在留言墙给对方留言，我们会转达。</p>
+          </div>
+          <div class="panel">
+            <div class="h4">Q2 · 产品会一直有货吗？</div>
+            <p class="small muted" style="margin-top:8px">文创周边为小批量生产，售完需要重新打样排期，周期通常 2–3 周。</p>
+          </div>
+          <div class="panel">
+            <div class="h4">Q3 · 收益真的会给到孩子吗？</div>
+            <p class="small muted" style="margin-top:8px">会。酬劳由社团统一对接合作学校发放，并保留发放记录以便公开查证，涉及未成年人隐私的部分不予公开。</p>
+          </div>
+          <div class="panel">
+            <div class="h4">Q4 · 批量或企业采购怎么联系？</div>
+            <p class="small muted" style="margin-top:8px">请通过 <a class="link-arrow small" href="projects.html#contact">合作与捐赠</a> 页面提供的渠道联系我们，可提供定制印标与礼盒方案。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <span class="brand__mark"><img src="assets/img/badge.png" alt="" width="34" height="34" decoding="async"></span>
+          <span class="brand__text">
+            <span class="brand__name">HELPing</span>
+            <span class="brand__sub">Pinghe Helping Club</span>
+          </span>
+        </a>
+        <p class="footer__desc">
+          平和学校公益帮助社。让弱势群体的能力被看见、被使用、能为自己的生活创造价值。
+        </p>
+      </div>
+      <div>
+        <div class="footer__col-title">项目</div>
+        <div class="footer__links">
+          <a href="projects.html#business">文创共创</a>
+          <a href="projects.html#outreach">线上宣传</a>
+          <a href="projects.html#health">健康守护</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">参与</div>
+        <div class="footer__links">
+          <a href="upload.html">上传作品</a>
+          <a href="gallery.html">作品画廊</a>
+          <a href="shop.html">公益商店</a>
+          <a href="messages.html">留言墙</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">联系</div>
+        <div class="footer__links">
+          <a href="projects.html#contact">合作与捐赠</a>
+          <a href="messages.html">意见反馈</a>
+          <a href="index.html">返回首页</a>
+          <a href="admin.html">管理后台</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> HELPing · 平和学校帮助社</span>
+      <span>演示站点：作品、购物车与留言保存在本地浏览器</span>
+    </div>
+  </div>
+</footer>
+
+<div class="scrim" data-scrim></div>
+<aside class="cart-panel" data-cart-panel aria-hidden="true" aria-label="购物车">
+  <div class="cart-panel__head">
+    <div>
+      <div class="h4">购物车</div>
+      <div class="tiny muted" data-cart-hint></div>
+    </div>
+    <button class="cart-btn" type="button" data-cart-close aria-label="关闭购物车">&times;</button>
+  </div>
+  <div class="cart-panel__body" data-cart-body></div>
+  <div class="cart-panel__foot" data-cart-foot hidden></div>
+</aside>
+
+<script src="assets/js/store.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<title>HELPing · 平和学校帮助社 | 让每一份才华被看见</title>
+<meta name="description" content="HELPing 是平和学校的公益帮助社。我们收集山区儿童的原创画作与书法，二次创作成文创产品并售卖，让创作者靠自己的才华获得酬劳。">
+<link rel="preload" as="image" href="assets/img/hero-wall.jpg">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="preload" href="assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body class="grain">
+
+<!-- ============================== 顶栏 ============================== -->
+<header class="header" data-header>
+  <div class="shell header__inner">
+    <a class="brand" href="index.html" aria-label="HELPing 首页">
+      <span class="brand__mark"><img src="assets/img/badge.png" alt="" width="34" height="34" decoding="async"></span>
+      <span class="brand__text">
+        <span class="brand__name">HELPing</span>
+        <span class="brand__sub">Pinghe Helping Club</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="主导航">
+      <a class="nav__link" href="index.html" aria-current="page">首页</a>
+      <a class="nav__link" href="projects.html">三个项目</a>
+      <a class="nav__link" href="gallery.html">作品画廊</a>
+      <a class="nav__link" href="upload.html">上传作品</a>
+      <a class="nav__link" href="shop.html">公益商店</a>
+      <a class="nav__link" href="messages.html">留言墙</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="cart-btn" type="button" data-cart-open aria-label="打开购物车">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M2.5 3h1.7l1.9 9.5a1 1 0 0 0 1 .8h7.5a1 1 0 0 0 1-.8L16.9 6H5.3"/>
+          <circle cx="7.6" cy="16.6" r="1.15"/><circle cx="14.6" cy="16.6" r="1.15"/>
+        </svg>
+        <span class="cart-count" data-cart-count hidden>0</span>
+      </button>
+      <a class="btn btn--sm header__cta" href="upload.html">上传作品</a>
+      <button class="burger" type="button" data-burger aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" data-drawer>
+  <a class="drawer__link" href="index.html">首页 <span>HOME</span></a>
+  <a class="drawer__link" href="projects.html">三个项目 <span>PROJECTS</span></a>
+  <a class="drawer__link" href="gallery.html">作品画廊 <span>GALLERY</span></a>
+  <a class="drawer__link" href="upload.html">上传作品 <span>UPLOAD</span></a>
+  <a class="drawer__link" href="shop.html">公益商店 <span>SHOP</span></a>
+  <a class="drawer__link" href="messages.html">留言墙 <span>MESSAGES</span></a>
+  <div class="drawer__foot">
+    <a class="btn btn--block" href="upload.html">上传一份原创作品</a>
+    <a class="btn btn--ghost btn--block" href="shop.html">逛逛公益商店</a>
+  </div>
+</div>
+
+<main>
+
+  <!-- ============================== Hero ============================== -->
+  <section class="hero">
+    <span class="scanline" aria-hidden="true"></span>
+    <div class="shell">
+      <div class="hero__grid">
+        <div>
+          <span class="eyebrow">Pinghe School · Helping Club</span>
+          <h1 class="display hero__title">
+            <span class="rise-line"><span>让每一份</span></span>
+            <span class="rise-line"><span>才华<em>被看见</em></span></span>
+          </h1>
+          <p class="lede hero__lede">
+            我们与安徽山区的学校对接，把孩子们的画和字收集起来，做成真正能卖出去的产品。
+            创作者第一次靠自己的才华，拿到一份属于自己的酬劳。
+          </p>
+          <div class="btn-row" style="margin-top:32px">
+            <a class="btn btn--lg" href="upload.html">上传一份作品</a>
+            <a class="btn btn--ghost btn--lg" href="shop.html">逛逛公益商店</a>
+          </div>
+          <div class="hero__meta">
+            <span class="tag tag--sage">安徽山区合作学校</span>
+            <span class="tag tag--clay">原创作品授权</span>
+            <span class="tag tag--mist">收益回流创作者</span>
+            <span class="tag tag--sand">公益健康科普</span>
+          </div>
+        </div>
+
+        <aside class="hero__aside">
+          <figure class="hero__figure">
+            <img src="assets/img/art-03.jpg" alt="山区儿童原创画作《开花的树》" width="1024" height="907">
+          </figure>
+          <div class="panel" style="padding:22px">
+            <span class="eyebrow eyebrow--plain">使用即付费</span>
+            <p class="small" style="margin-top:10px;color:var(--ink-2)">
+              作品版权始终属于创作者本人。任何商家需要使用作品进行生产，
+              都必须向创作者支付酬劳——这是我们做这件事的前提。
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="shell">
+      <figure class="hero__band">
+        <img src="assets/img/hero-wall.jpg" alt="贴在墙上的儿童原创画作" width="1536" height="907">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================== 跑马灯 ============================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track" data-marquee>
+      <span class="marquee__item">山区儿童原创作品</span>
+      <span class="marquee__item">二次创作文创</span>
+      <span class="marquee__item">收益回流创作者</span>
+      <span class="marquee__item">图书馆展陈</span>
+      <span class="marquee__item">校园义卖</span>
+      <span class="marquee__item">线上公益商店</span>
+      <span class="marquee__item">健康体态科普</span>
+    </div>
+  </div>
+
+  <!-- ============================== 01 我们是谁 ============================== -->
+  <section class="section" id="about">
+    <div class="shell">
+      <div class="section-head" data-reveal>
+        <div class="section-head__top">
+          <span class="eyebrow">01 — Who we are</span>
+          <span class="num-badge">平和学校 · 公益帮助社</span>
+        </div>
+        <div class="section-head__body">
+          <h2 class="h1">帮助别人，<br>也是在帮助自己。</h2>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="stack" data-reveal>
+          <p class="lede">
+            如我们的名字 HELPing 一样，社团的主体是<strong>帮助</strong>——
+            既是帮助弱势群体，也是对自己的帮助。
+          </p>
+          <p class="small muted">
+            我们始终相信，弱势群体需要被看见，被帮助。
+          </p>
+          <p class="small muted">
+            我们希望，让弱势群体自己的能力能被发现，能有所作用，能为自己生活创造价值，
+            实现社会资源的再分配。
+          </p>
+          <p class="small muted">
+            我们也希望，弱势群体的健康需求能够被重视，被提早预防，被认真对待。
+          </p>
+          <div class="btn-row">
+            <a class="link-arrow" href="projects.html">看我们的三个项目 →</a>
+          </div>
+        </div>
+
+        <figure class="split__media" data-reveal data-reveal-delay="120">
+          <img src="assets/img/art-04.jpg" alt="儿童原创画作《一起放风筝》" width="1024" height="907" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== 数据 ============================== -->
+  <section class="section--tight section--paper">
+    <div class="shell">
+      <div class="stats" data-reveal>
+        <div class="stat">
+          <div class="stat__num">03</div>
+          <div class="stat__label">公益项目方向</div>
+          <div class="stat__note">文创共创 · 线上宣传 · 健康守护</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">01</div>
+          <div class="stat__label">对接山区学校</div>
+          <div class="stat__note">安徽地区，已完成初步沟通</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">04</div>
+          <div class="stat__label">原生作品形态</div>
+          <div class="stat__note">绘画 · 书法 · 创意写作 · 手作</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">30<span style="font-size:.6em">%</span></div>
+          <div class="stat__label">创作者收益分成</div>
+          <div class="stat__note">示例比例，以社团最终方案为准</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== 02 三个项目 ============================== -->
+  <section class="section section--alt" id="projects">
+    <div class="shell">
+      <div class="section-head" data-reveal>
+        <div class="section-head__top">
+          <span class="eyebrow">02 — What we do</span>
+          <span class="num-badge">三个项目方向</span>
+        </div>
+        <div class="section-head__body">
+          <h2 class="h1">一个社团，<br>三件具体的事。</h2>
+          <p class="lede" style="margin-top:20px">
+            不喊口号。我们把「帮助」拆成三件能落地、能被检验的事来做。
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="project" data-reveal>
+          <span class="project__idx">PROJECT 01</span>
+          <span class="project__accent" style="background:var(--clay)"></span>
+          <h3 class="h3">文创共创</h3>
+          <p class="small muted">
+            对接山区儿童，收集他们的绘画、书法与创意写作等原生作品，
+            由社团成员完成二次创作与产品设计，打磨成可以真正售卖的文创周边。
+          </p>
+          <div class="project__foot">
+            <span class="tag tag--clay">Business</span>
+            <div style="margin-top:14px"><a class="link-arrow small" href="projects.html#business">了解详情 →</a></div>
+          </div>
+        </article>
+
+        <article class="project" data-reveal data-reveal-delay="90">
+          <span class="project__idx">PROJECT 02</span>
+          <span class="project__accent" style="background:var(--mist)"></span>
+          <h3 class="h3">线上宣传</h3>
+          <p class="small muted">
+            运营抖音、小红书与微信等平台，负责公益文创的品牌宣传、产品推广、
+            订单销售与售后维护。让更多人知道这些作品从哪来。
+          </p>
+          <div class="project__foot">
+            <span class="tag tag--mist">Outreach</span>
+            <div style="margin-top:14px"><a class="link-arrow small" href="projects.html#outreach">了解详情 →</a></div>
+          </div>
+        </article>
+
+        <article class="project" data-reveal data-reveal-delay="180">
+          <span class="project__idx">PROJECT 03</span>
+          <span class="project__accent" style="background:var(--sage)"></span>
+          <h3 class="h3">健康守护</h3>
+          <p class="small muted">
+            聚焦县域、山区青少年常见的体态问题——脊柱侧弯、扁平足、颈椎生理曲度变直，
+            通过医生访谈、入校讲座与体态筛查培训，把预防做在前面。
+          </p>
+          <div class="project__foot">
+            <span class="tag tag--sage">Health</span>
+            <div style="margin-top:14px"><a class="link-arrow small" href="projects.html#health">了解详情 →</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== 03 作品墙 ============================== -->
+  <section class="section section--paper" id="wall">
+    <div class="shell">
+      <div class="section-head" data-reveal>
+        <div class="section-head__top">
+          <span class="eyebrow">03 — The wall</span>
+          <a class="link-arrow small" href="gallery.html">全部作品 →</a>
+        </div>
+        <div class="section-head__body">
+          <h2 class="h1">他们画下的世界。</h2>
+          <p class="lede" style="margin-top:20px">
+            每一幅都来自合作学校学生的原创投稿。它们不是素材，是有人认真看过这个世界之后留下的证据。
+          </p>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="card" data-reveal>
+          <div class="card__media"><img src="assets/img/art-01.jpg" alt="《山那边的家》蜡笔画" loading="lazy"></div>
+          <figcaption class="card__body">
+            <div class="card__kicker">蜡笔 · 9 岁</div>
+            <div class="h4" style="margin-top:8px">山那边的家</div>
+          </figcaption>
+        </figure>
+        <figure class="card" data-reveal data-reveal-delay="80">
+          <div class="card__media"><img src="assets/img/art-06.jpg" alt="《我要去太空》蜡笔画" loading="lazy"></div>
+          <figcaption class="card__body">
+            <div class="card__kicker">蜡笔 · 7 岁</div>
+            <div class="h4" style="margin-top:8px">我要去太空</div>
+          </figcaption>
+        </figure>
+        <figure class="card" data-reveal data-reveal-delay="160">
+          <div class="card__media"><img src="assets/img/art-07.jpg" alt="《海底的一天》水彩画" loading="lazy"></div>
+          <figcaption class="card__body">
+            <div class="card__kicker">水彩 · 8 岁</div>
+            <div class="h4" style="margin-top:8px">海底的一天</div>
+          </figcaption>
+        </figure>
+        <figure class="card" data-reveal data-reveal-delay="240">
+          <div class="card__media"><img src="assets/img/art-05.jpg" alt="儿童毛笔书法习作" loading="lazy"></div>
+          <figcaption class="card__body">
+            <div class="card__kicker">毛笔 · 9 岁</div>
+            <div class="h4" style="margin-top:8px">第一次写毛笔字</div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== 04 参与方式 ============================== -->
+  <section class="section section--alt" id="how">
+    <div class="shell">
+      <div class="section-head" data-reveal>
+        <div class="section-head__top">
+          <span class="eyebrow">04 — How it works</span>
+          <span class="num-badge">从一张画到一件产品</span>
+        </div>
+        <div class="section-head__body">
+          <h2 class="h1">一件作品，<br>要走完这四步。</h2>
+        </div>
+      </div>
+
+      <div class="steps" data-reveal>
+        <div class="step">
+          <div class="step__idx">STEP 01</div>
+          <div>
+            <h3 class="h3 step__title">上传原创作品</h3>
+            <p class="step__desc">
+              创作者本人或监护人把画作、书法、创意写作等作品拍照上传到本站，
+              填写作品说明并完成授权确认。
+            </p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__idx">STEP 02</div>
+          <div>
+            <h3 class="h3 step__title">二次创作与设计</h3>
+            <p class="step__desc">
+              社团设计组对原作进行二次加工与优化，打磨成完整、成熟的文创设计方案，
+              全程保留原作的核心表达。
+            </p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__idx">STEP 03</div>
+          <div>
+            <h3 class="h3 step__title">打样与生产</h3>
+            <p class="step__desc">
+              小批量打样、调整材质与工艺，确认样品后才投入生产，
+              避免一次性生产带来的浪费。
+            </p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__idx">STEP 04</div>
+          <div>
+            <h3 class="h3 step__title">售卖与分成</h3>
+            <p class="step__desc">
+              通过图书馆展陈、校园活动义卖、线上公益商店等渠道售出，
+              收益按约定比例以酬劳形式支付给创作者。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== 05 留言墙 ============================== -->
+  <section class="section section--paper" id="messages">
+    <div class="shell">
+      <div class="section-head" data-reveal>
+        <div class="section-head__top">
+          <span class="eyebrow">05 — Messages</span>
+          <a class="link-arrow small" href="messages.html">去留言墙 →</a>
+        </div>
+        <div class="section-head__body">
+          <h2 class="h1">给他们留一句话。</h2>
+          <p class="lede" style="margin-top:20px">
+            作品会被看见，话也会。写下你想对他们说的话，我们会择优整理，
+            随作品一起交到孩子们手上。
+          </p>
+        </div>
+      </div>
+
+      <div class="msg-wall" id="messagePreview" data-reveal></div>
+
+      <div class="btn-row" style="margin-top:36px">
+        <a class="btn" href="messages.html">写下我的鼓励</a>
+        <a class="btn btn--ghost" href="upload.html">我也要上传作品</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== CTA ============================== -->
+  <section class="section section--tight">
+    <div class="shell">
+      <div class="cta-band" data-reveal>
+        <div>
+          <h2 class="cta-band__title">想成为社团的一员？</h2>
+          <p class="cta-band__desc">
+            我们正在招募设计、内容运营、线上宣传与健康科普方向的成员。
+            不需要你什么都会，只需要你愿意把一件事做到底。
+          </p>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--light" href="projects.html">看看我们要做什么</a>
+          <a class="btn btn--ghost-light" href="messages.html">给我们留言</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================== 页脚 ============================== -->
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <span class="brand__mark"><img src="assets/img/badge.png" alt="" width="34" height="34" decoding="async"></span>
+          <span class="brand__text">
+            <span class="brand__name">HELPing</span>
+            <span class="brand__sub">Pinghe Helping Club</span>
+          </span>
+        </a>
+        <p class="footer__desc">
+          平和学校公益帮助社。让弱势群体的能力被看见、被使用、能为自己的生活创造价值。
+        </p>
+      </div>
+
+      <div>
+        <div class="footer__col-title">项目</div>
+        <div class="footer__links">
+          <a href="projects.html#business">文创共创</a>
+          <a href="projects.html#outreach">线上宣传</a>
+          <a href="projects.html#health">健康守护</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer__col-title">参与</div>
+        <div class="footer__links">
+          <a href="upload.html">上传作品</a>
+          <a href="gallery.html">作品画廊</a>
+          <a href="shop.html">公益商店</a>
+          <a href="messages.html">留言墙</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer__col-title">联系</div>
+        <div class="footer__links">
+          <a href="projects.html#contact">合作与捐赠</a>
+          <a href="messages.html">意见反馈</a>
+          <a href="index.html">返回首页</a>
+          <a href="admin.html">管理后台</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> HELPing · 平和学校帮助社</span>
+      <span>演示站点：作品、购物车与留言保存在本地浏览器</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================== 购物车抽屉 ============================== -->
+<div class="scrim" data-scrim></div>
+<aside class="cart-panel" data-cart-panel aria-hidden="true" aria-label="购物车">
+  <div class="cart-panel__head">
+    <div>
+      <div class="h4">购物车</div>
+      <div class="tiny muted" data-cart-hint></div>
+    </div>
+    <button class="cart-btn" type="button" data-cart-close aria-label="关闭购物车">&times;</button>
+  </div>
+  <div class="cart-panel__body" data-cart-body></div>
+  <div class="cart-panel__foot" data-cart-foot hidden></div>
+</aside>
+
+<script src="assets/js/store.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  /* 首页留言预览：取最新 3 条 */
+  (function () {
+    var el = document.getElementById('messagePreview');
+    if (!el) return;
+    var TONES = ['sage', 'mist', 'clay', 'sand', 'lilac'];
+    el.innerHTML = HELP.messages.list().slice(0, 3).map(function (m, i) {
+      var tone = m.tone || TONES[i % TONES.length];
+      return '' +
+        '<article class="note note--' + tone + '">' +
+          '<p class="note__text">' + HELP.escapeHtml(m.text) + '</p>' +
+          '<div class="note__foot">' +
+            '<span><span class="note__who">' + HELP.escapeHtml(m.name || '匿名') + '</span>' +
+            (m.role ? ' · ' + HELP.escapeHtml(m.role) : '') + '</span>' +
+            '<span>' + HELP.escapeHtml(m.createdAt || '') + '</span>' +
+          '</div>' +
+        '</article>';
+    }).join('');
+  })();
+</script>
+</body>
+</html>
